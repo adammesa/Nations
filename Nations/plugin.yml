@@ -1,0 +1,4 @@
+name: Nations
+main: com.github.Nebula111.nations.nations
+version: 0.1
+harddepend: Factions
