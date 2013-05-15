@@ -16,7 +16,8 @@ public class PlayerPositionEvent implements Listener {
 		} else {
 		double locx = (double) p.getLocation().getX();
 		double locz = (double) p.getLocation().getZ();
-		
+		//TODO: get player biome position
+		//testing
 		
 		}
 		
