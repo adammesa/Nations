@@ -12,6 +12,7 @@ public class nations extends JavaPlugin {
 
 	public final NewPlayerEvent NewPlayerEvent = new NewPlayerEvent(this);
 	public final PlayerPositionEvent PlayerPositionEvent = new PlayerPositionEvent();
+	public final mysql mysql = new mysql(this);
 
 	@Override
 	public void onDisable() {
@@ -35,20 +36,25 @@ public class nations extends JavaPlugin {
 			this.getLogger().warning("Could not hook into factions!");
 			Bukkit.getPluginManager().disablePlugin(this);
 		}
-
 		// ** Register Events ** \\
 
 		PluginManager pm = getServer().getPluginManager();
 		pm.registerEvents(new NewPlayerEvent(this), this);
 		pm.registerEvents(new PlayerPositionEvent(), this);
+	//	pm.registerEvents(new mysql(), this);
+		
 		
 		// ** Config Stuff ** \\
 
 		FileConfiguration config = getConfig();
 		
 		config.addDefault("Book Title", "AC");
+		config.addDefault("username", "Mysql_Username");
+		config.addDefault("password", "Mysql_Password");
+		config.addDefault("host", "jdbc:mysql://localhost:3306/database");
 		config.options().copyDefaults();
 		saveConfig();
+		
 		
 		
 	}
