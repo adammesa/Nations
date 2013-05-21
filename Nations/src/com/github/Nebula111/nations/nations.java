@@ -9,6 +9,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.github.Nebula111.nations.commands.CmdReloadConfig;
+import com.github.Nebula111.nations.mysql.mysql;
 
 
 
@@ -31,6 +32,7 @@ public class nations extends JavaPlugin {
 		config.addDefault("username", "Mysql_Username");
 		config.addDefault("password", "Mysql_Password");
 		config.addDefault("host", "jdbc:mysql://localhost:3306/database");
+		config.addDefault("port", "3306")
 		config.options().copyDefaults();
 		saveConfig();
 	}
