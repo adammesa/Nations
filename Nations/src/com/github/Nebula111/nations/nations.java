@@ -13,7 +13,7 @@ import com.github.Nebula111.nations.commands.CmdReloadConfig;
 
 
 public class nations extends JavaPlugin {
-
+	//DAT COMMENT
 	public final NewPlayerEvent NewPlayerEvent = new NewPlayerEvent(this);
 	public final PlayerPositionEvent PlayerPositionEvent = new PlayerPositionEvent();
 
