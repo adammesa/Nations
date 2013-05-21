@@ -19,9 +19,21 @@ public class nations extends JavaPlugin {
 		PluginDescriptionFile pdf = this.getDescription();
 		this.getLogger().info("Nations version " + pdf.getVersion() + "has been Disabled!");
 	}
-
+	public void loadConfig(){
+		// ** Config Stuff ** \\
+		FileConfiguration config = getConfig();
+		
+		config.addDefault("Book Title", "AC");
+		config.addDefault("username", "Mysql_Username");
+		config.addDefault("password", "Mysql_Password");
+		config.addDefault("host", "jdbc:mysql://localhost:3306/database");
+		config.options().copyDefaults();
+		saveConfig();
+	}
+	
 	@Override
 	public void onEnable() {
+		loadConfig();
 		PluginDescriptionFile pdf = this.getDescription();
 		this.getLogger().info("Enabling Nations version " + pdf.getVersion());
 
@@ -42,18 +54,7 @@ public class nations extends JavaPlugin {
 		pm.registerEvents(new NewPlayerEvent(this), this);
 		pm.registerEvents(new PlayerPositionEvent(), this);
 	//	pm.registerEvents(new mysql(), this);
-		
-		
-		// ** Config Stuff ** \\
-
-		FileConfiguration config = getConfig();
-		
-		config.addDefault("Book Title", "AC");
-		config.addDefault("username", "Mysql_Username");
-		config.addDefault("password", "Mysql_Password");
-		config.addDefault("host", "jdbc:mysql://localhost:3306/database");
-		config.options().copyDefaults();
-		saveConfig();
+	
 		
 		
 		
