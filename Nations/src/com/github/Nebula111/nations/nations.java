@@ -8,6 +8,8 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import commands.CmdReloadConfig;
+
 public class nations extends JavaPlugin {
 
 	public final NewPlayerEvent NewPlayerEvent = new NewPlayerEvent(this);
@@ -33,6 +35,7 @@ public class nations extends JavaPlugin {
 	
 	@Override
 	public void onEnable() {
+		getCommand("nationsreload").setExecutor(new CmdReloadConfig(this));
 		loadConfig();
 		PluginDescriptionFile pdf = this.getDescription();
 		this.getLogger().info("Enabling Nations version " + pdf.getVersion());

@@ -14,7 +14,7 @@ import org.bukkit.inventory.meta.BookMeta;
 
 public class NewPlayerEvent implements Listener {
 	
-	//Testing Mersenne Twister
+
 	nations plugin; //Constructor for getting config values
 	public NewPlayerEvent(nations instance) {
 		plugin = instance;
