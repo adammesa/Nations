@@ -27,7 +27,7 @@ public class CmdReloadConfig implements CommandExecutor {
 			plugin.reloadConfig();
 			p.sendMessage(ChatColor.GREEN + "Configuration Successfully Reloaded");
 		}
-		return false;
+		return true;
 	}
 
 }
