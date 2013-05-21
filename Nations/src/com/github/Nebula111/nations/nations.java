@@ -32,7 +32,7 @@ public class nations extends JavaPlugin {
 		config.addDefault("username", "Mysql_Username");
 		config.addDefault("password", "Mysql_Password");
 		config.addDefault("host", "jdbc:mysql://localhost:3306/database");
-		config.addDefault("port", "3306")
+		config.addDefault("port", "3306");
 		config.options().copyDefaults();
 		saveConfig();
 	}
