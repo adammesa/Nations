@@ -1,5 +1,6 @@
 package com.github.Nebula111.nations;
 
+import org.bukkit.Bukkit;
 import org.bukkit.block.Biome;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -19,6 +20,7 @@ public class PlayerPositionEvent implements Listener {
 			int locz = (int) p.getLocation().getZ();
 			// TODO: get player biome position
 			Biome biome = p.getWorld().getBiome(locx, locz);
+			Bukkit.getServer().broadcastMessage(biome.name());
 		}
 
 	}

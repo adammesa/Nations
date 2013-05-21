@@ -16,11 +16,10 @@ public class mysql {
 		plugin = instance;
 	}
 
-	String sqlusername = plugin.getConfig().getString("username");
-	String sqlpwd = plugin.getConfig().getString("password");
-	String sqlurl = plugin.getConfig().getString("host");
-
 	public void createTables() throws SQLException {
+		String sqlusername = plugin.getConfig().getString("username");
+		String sqlpwd = plugin.getConfig().getString("password");
+		String sqlurl = plugin.getConfig().getString("host");
 		try {
 			Connection conn = DriverManager.getConnection(plugin.getConfig()
 					.getString("host"), plugin.getConfig()

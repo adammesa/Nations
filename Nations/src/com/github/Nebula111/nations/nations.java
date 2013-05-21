@@ -17,7 +17,6 @@ public class nations extends JavaPlugin {
 
 	public final NewPlayerEvent NewPlayerEvent = new NewPlayerEvent(this);
 	public final PlayerPositionEvent PlayerPositionEvent = new PlayerPositionEvent();
-	public final mysql mysql = new mysql(this);
 
 	@Override
 	public void onDisable() {
@@ -54,6 +53,7 @@ public class nations extends JavaPlugin {
 		} else {
 			this.getLogger().warning("Could not hook into factions!");
 			Bukkit.getPluginManager().disablePlugin(this);
+			return;
 		}
 		// ** Register Events ** \\
 

@@ -2,3 +2,6 @@ name: Nations
 main: com.github.Nebula111.nations.nations
 version: 0.1
 harddepend: Factions
+commands:
+    nationsreload:
+        description: Reloads the plugin from the config.
