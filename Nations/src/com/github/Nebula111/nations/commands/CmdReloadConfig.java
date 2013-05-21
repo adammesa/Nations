@@ -1,4 +1,4 @@
-package commands;
+package com.github.Nebula111.nations.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

@@ -8,7 +8,8 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import commands.CmdReloadConfig;
+import com.github.Nebula111.nations.commands.CmdReloadConfig;
+
 
 
 public class nations extends JavaPlugin {
