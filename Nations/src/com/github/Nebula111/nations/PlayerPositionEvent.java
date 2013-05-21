@@ -1,5 +1,6 @@
 package com.github.Nebula111.nations;
 
+import org.bukkit.block.Biome;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -9,18 +10,17 @@ import org.bukkit.event.player.PlayerMoveEvent;
 public class PlayerPositionEvent implements Listener {
 
 	@EventHandler(priority = EventPriority.NORMAL)
-	public void onPlayerMove(PlayerMoveEvent event){
+	public void onPlayerMove(PlayerMoveEvent event) {
 		Player p = event.getPlayer();
-		if(event.isCancelled()){
+		if (event.isCancelled()) {
 			return;
 		} else {
-		double locx = (double) p.getLocation().getX();
-		double locz = (double) p.getLocation().getZ();
-		//TODO: get player biome position
-		//testing
-		
+			int locx = (int) p.getLocation().getX();
+			int locz = (int) p.getLocation().getZ();
+			// TODO: get player biome position
+			Biome biome = p.getWorld().getBiome(locx, locz);
 		}
-		
+
 	}
 
 }
