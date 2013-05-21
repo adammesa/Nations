@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 
 import com.github.Nebula111.nations.nations;
 
+
 public class CmdReloadConfig implements CommandExecutor {
 	nations plugin;
 

@@ -10,6 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import commands.CmdReloadConfig;
 
+
 public class nations extends JavaPlugin {
 
 	public final NewPlayerEvent NewPlayerEvent = new NewPlayerEvent(this);
