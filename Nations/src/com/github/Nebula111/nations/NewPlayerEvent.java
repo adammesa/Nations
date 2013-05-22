@@ -1,5 +1,8 @@
 package com.github.Nebula111.nations;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 import org.bukkit.ChatColor;
@@ -11,6 +14,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.BookMeta;
+
+import com.github.Nebula111.nations.mysql.MySQL_api;
 
 public class NewPlayerEvent implements Listener {
 	
@@ -38,6 +43,15 @@ public class NewPlayerEvent implements Listener {
 			bm.setPages(pages);
 			book.setItemMeta(bm);
 			p.getInventory().addItem(book);
+			
+			MySQL_api mysql = new MySQL_api("host.name", "port", "database", "user", "pass");
+			Connection c = null;
+			c = mysql.open();
+			Statement stmnt = c.createStatement();
+			
+					
+			
+			
 			
 
 		}
